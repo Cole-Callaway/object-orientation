@@ -11,7 +11,7 @@ const me = {
 }
 
 
-console.log(me)
+
 console.log(me.name)
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
@@ -41,7 +41,7 @@ console.log(dog.name)
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
-
+console.log(dog['color'])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -51,23 +51,31 @@ console.log(dog.name)
 */
 
 //Code here
-
+const favoriteThings = {
+  band: 'AC/DC',
+  food: "Pastas",
+  person: "Teddy Roosevelt",
+  book: "Jurassic Park",
+  movie: "Saving Private Ryan",
+  holiday: "4th of July"
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
-
-
+favoriteThings['car'] = '2019 Ford GT'
+favoriteThings.show = 'The Pacific'
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
 */
 
 //Code here
-
-
+favoriteThings.food = "Chicken Nuggets"
+favoriteThings.book = 'Harry Potter'
+console.log(favoriteThings)
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
 // Do not edit the code below.
@@ -84,7 +92,7 @@ var carDetails = {
 */
 
 //Code Here
-
+const {color, make, model, year} = carDetails
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -97,7 +105,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -116,7 +124,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function totalPopulation(pop) {
+  const {utah, california, texas, arizona} = pop
+  return utah + california + texas + arizona
+}
+console.log(totalPopulation({utah: 3000000, california: 300000000, texas: 27000000, arizona: 7000000}))
 
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
